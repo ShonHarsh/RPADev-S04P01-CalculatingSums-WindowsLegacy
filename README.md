@@ -21,7 +21,16 @@ After making a pull request or downloading the project, open the Main.xaml in Ui
 ### Sample Output
 
 ```
-//ToDo
+07/27/2021 17:11:10 => [Debug] Execution started for project: RPADev-S04P01-CalculatingSums
+07/27/2021 17:11:12 => [Info] RPADev-S04P01-CalculatingSums execution started
+07/27/2021 17:11:15 => [Debug] Operation 01 completed.
+07/27/2021 17:11:16 => [Info] RPADev-S04P01-CalculatingSums execution ended in: 00:00:03
+
+07/27/2021 17:19:52 => [Debug] Execution started for project: RPADev-S04P01-CalculatingSums
+07/27/2021 17:19:56 => [Info] RPADev-S04P01-CalculatingSums execution started
+07/27/2021 17:20:06 => [Debug] Operation 02 completed.
+07/27/2021 17:20:06 => [Info] RPADev-S04P01-CalculatingSums execution ended in: 00:00:10
+
 ```
 
 ### RPA Developer Foundation Sections
