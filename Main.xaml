@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1153,1559" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1153,1650" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -82,14 +82,14 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Calculate the sum in 2 Excel files&#xA;&#xA;Calculate the sum of the values from two columns in an Excel file in 3 ways. Create a workflow that adds the values on column A with values on column B and writes them in column C in different ways:&#xA;&#xA;Keeps the Excel open and writes the results in real time, row by row so you can see the changes;&#xA;Keeps the Excel closed, set the column values in the memory DataTable and adds all the table to a new Excel files at once, in the end;&#xA;Calculates the sum by using Excel formulas in the original file.&#xA;Note: Use the Sample Columns.xlsx file below as the input file for this exercise.&#xA;&#xA;Sums&#xA;195&#xA;3394&#xA;18068&#xA;679&#xA;335&#xA;95585&#xA;7&#xA;7537&#xA;7775&#xA;965&#xA;3668" DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="619,1092" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Calculate the sum in 2 Excel files&#xA;&#xA;Calculate the sum of the values from two columns in an Excel file in 3 ways. Create a workflow that adds the values on column A with values on column B and writes them in column C in different ways:&#xA;&#xA;Keeps the Excel open and writes the results in real time, row by row so you can see the changes;&#xA;Keeps the Excel closed, set the column values in the memory DataTable and adds all the table to a new Excel files at once, in the end;&#xA;Calculates the sum by using Excel formulas in the original file.&#xA;Note: Use the Sample Columns.xlsx file below as the input file for this exercise.&#xA;&#xA;Sums&#xA;195&#xA;3394&#xA;18068&#xA;679&#xA;335&#xA;95585&#xA;7&#xA;7537&#xA;7775&#xA;965&#xA;3668" DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="619,1485" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch Main" sap:VirtualizedContainerService.HintSize="577,643" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch Main" sap:VirtualizedContainerService.HintSize="577,1036" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
         <Variable x:TypeArguments="x:Int32" Name="printMethod">
           <Variable.Default>
@@ -98,7 +98,7 @@
         </Variable>
       </TryCatch.Variables>
       <TryCatch.Try>
-        <Sequence DisplayName="Main TryCatch Container" sap:VirtualizedContainerService.HintSize="539,416" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <Sequence DisplayName="Main TryCatch Container" sap:VirtualizedContainerService.HintSize="539,809" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -119,7 +119,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
-          <Switch x:TypeArguments="x:Int32" DisplayName="PrintMethod Switch" sap:VirtualizedContainerService.HintSize="497,182" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+          <Switch x:TypeArguments="x:Int32" DisplayName="PrintMethod Switch" sap:VirtualizedContainerService.HintSize="497,575" sap2010:WorkflowViewState.IdRef="Switch`1_1">
             <Switch.Default>
               <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="No action taken.  Set the PrintMethod value to 1, 2 or 3 to run the appropriate exercise path." />
             </Switch.Default>
@@ -142,14 +142,19 @@
               </ui:InvokeWorkflowFile>
               <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="372,61" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="Operation 01 completed." />
             </Sequence>
-            <Sequence x:Key="2" sap2010:Annotation.AnnotationText="Keeps the Excel closed, set the column values in the memory DataTable and adds all the table to a new Excel files at once, in the end;" DisplayName="Method 02 Case" sap:VirtualizedContainerService.HintSize="272,225" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <Sequence x:Key="2" sap2010:Annotation.AnnotationText="Keeps the Excel closed, set the column values in the memory DataTable and adds all the table to a new Excel files at once, in the end;" DisplayName="Method 02 Case" sap:VirtualizedContainerService.HintSize="414,347" sap2010:WorkflowViewState.IdRef="Sequence_13">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <WriteLine sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="Operation 02 completed." />
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="372,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="RPADev-S04P01-CalculatingSums-Method02.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <WriteLine sap:VirtualizedContainerService.HintSize="372,61" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="Operation 02 completed." />
             </Sequence>
             <Sequence x:Key="3" sap2010:Annotation.AnnotationText="Calculates the sum by using Excel formulas in the original file.&#xA;" DisplayName="Method 03 Case" sap:VirtualizedContainerService.HintSize="272,210" sap2010:WorkflowViewState.IdRef="Sequence_14">
               <sap:WorkflowViewStateService.ViewState>
