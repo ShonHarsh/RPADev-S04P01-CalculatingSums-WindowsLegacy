@@ -1,12 +1,4 @@
-<Activity mc:Ignorable="sap sap2010 sads" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#"
- xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
- xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
- xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
- xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
- xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
- xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
- xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
- xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1153,1559" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -31,6 +23,19 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>DocumentFormat.OpenXml.Spreadsheet</x:String>
+      <x:String>DocumentFormat.OpenXml</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -60,6 +65,124 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>DocumentFormat.OpenXml</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Calculate the sum in 2 Excel files&#xA;&#xA;Calculate the sum of the values from two columns in an Excel file in 3 ways. Create a workflow that adds the values on column A with values on column B and writes them in column C in different ways:&#xA;&#xA;Keeps the Excel open and writes the results in real time, row by row so you can see the changes;&#xA;Keeps the Excel closed, set the column values in the memory DataTable and adds all the table to a new Excel files at once, in the end;&#xA;Calculates the sum by using Excel formulas in the original file.&#xA;Note: Use the Sample Columns.xlsx file below as the input file for this exercise.&#xA;&#xA;Sums&#xA;195&#xA;3394&#xA;18068&#xA;679&#xA;335&#xA;95585&#xA;7&#xA;7537&#xA;7775&#xA;965&#xA;3668&#xA;" DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="619,1107" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch Main" sap:VirtualizedContainerService.HintSize="577,643" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="x:Int32" Name="printMethod">
+          <Variable.Default>
+            <Literal x:TypeArguments="x:Int32" />
+          </Variable.Default>
+        </Variable>
+      </TryCatch.Variables>
+      <TryCatch.Try>
+        <Sequence DisplayName="Main TryCatch Container" sap:VirtualizedContainerService.HintSize="539,416" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap2010:Annotation.AnnotationText="Set the PrintMethod value to 1, 2 or 3 to run the appropriate exercise path." DisplayName="Set Exercise Path Variable" sap:VirtualizedContainerService.HintSize="497,102" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">
+                <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">printMethod</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">1</InArgument>
+            </Assign.Value>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Assign>
+          <Switch x:TypeArguments="x:Int32" DisplayName="PrintMethod Switch" sap:VirtualizedContainerService.HintSize="497,182" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+            <Switch.Default>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="No action taken.  Set the PrintMethod value to 1, 2 or 3 to run the appropriate exercise path." />
+            </Switch.Default>
+            <Switch.Expression>
+              <InArgument x:TypeArguments="x:Int32">
+                <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">printMethod</mca:CSharpValue>
+              </InArgument>
+            </Switch.Expression>
+            <Sequence x:Key="1" sap2010:Annotation.AnnotationText="Keeps the Excel open and writes the results in real time, row by row so you can see the changes;" DisplayName="Method 01 Case" sap:VirtualizedContainerService.HintSize="414,347" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke RPADev-S04P01-CalculatingSums-Method01 workflow" sap:VirtualizedContainerService.HintSize="372,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="RPADev-S04P01-CalculatingSums-Method01.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="372,61" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="Operation 01 completed." />
+            </Sequence>
+            <Sequence x:Key="2" sap2010:Annotation.AnnotationText="Keeps the Excel closed, set the column values in the memory DataTable and adds all the table to a new Excel files at once, in the end;" DisplayName="Method 02 Case" sap:VirtualizedContainerService.HintSize="272,225" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <WriteLine sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="Operation 02 completed." />
+            </Sequence>
+            <Sequence x:Key="3" sap2010:Annotation.AnnotationText="Calculates the sum by using Excel formulas in the original file.&#xA;" DisplayName="Method 03 Case" sap:VirtualizedContainerService.HintSize="272,210" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <WriteLine sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="Operation 03 completed." />
+            </Sequence>
+          </Switch>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="543,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_1">
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"There was an exception " + exception</mca:CSharpValue>
+              </InArgument>
+            </WriteLine>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
 </Activity>
