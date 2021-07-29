@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="RPADev_S04P01_CalculatingSums_Method02" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1153,1945" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="RPADev_S04P01_CalculatingSums_Method02" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1137,1976" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -72,10 +72,9 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Keeps the Excel closed, set the column values in the memory DataTable and adds all the table to a new Excel files at once, in the end;&#xD;&#xA;&#xD;&#xA;Note: I created another worksheet in the source file named &quot;Sheet2&quot; for this exercise.  The data is  read from the &quot;Source &quot;worksheet." DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="554,1780" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="Keeps the Excel closed, set the column values in the memory DataTable and adds all the table to a new Excel files at once, in the end;&#xA;&#xA;Note: I created another worksheet in the source file named &quot;Sheet2&quot; for this exercise.  The data is  read from the &quot;Source &quot;worksheet." DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="554,1811" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
       <Variable x:TypeArguments="sd:DataColumn" Name="columnC" />
@@ -86,7 +85,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange AddHeaders="False" sap2010:Annotation.AnnotationText="Get the data from the file." DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="512,118" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Source" WorkbookPath="RPADev-S04P01-CalculatingSums-Sample-Columns.xlsx">
+    <ui:ReadRange AddHeaders="False" sap2010:Annotation.AnnotationText="Get the data from the file." DisplayName="Read Range To DataTable" sap:VirtualizedContainerService.HintSize="512,118" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Source" WorkbookPath="RPADev-S04P01-CalculatingSums-Sample-Columns.xlsx">
       <ui:ReadRange.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">dataTable</mca:CSharpReference>
@@ -120,13 +119,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:AddDataColumn>
-    <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" DisplayName="For Each DataTable Row" sap:VirtualizedContainerService.HintSize="512,1139" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
+    <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="For each Row in the DataTable variable." DisplayName="For Each DataTable Row" sap:VirtualizedContainerService.HintSize="512,1170" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body Range" sap:VirtualizedContainerService.HintSize="476,1005" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Body Range Container" sap:VirtualizedContainerService.HintSize="476,1005" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="rowIndex" />
               <Variable x:TypeArguments="x:Double" Name="columnA" />
@@ -216,6 +215,11 @@
           <mca:CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">dataTable.Rows</mca:CSharpValue>
         </InArgument>
       </ui:ForEach.Values>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
     <ui:WriteRange AddHeaders="False" DisplayName="Write DataTable To File" sap:VirtualizedContainerService.HintSize="512,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet2" StartingCell="A1" WorkbookPath="RPADev-S04P01-CalculatingSums-Sample-Columns.xlsx">
       <ui:WriteRange.DataTable>
