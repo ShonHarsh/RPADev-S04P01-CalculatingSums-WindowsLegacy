@@ -20,6 +20,8 @@ After making a pull request or downloading the project, open the Main.xaml in Ui
 
 ### Sample Output
 
+![](https://shonharsh.github.io/curriculum-vitae/images/RPADev-S04P01-CalculatingSums-Sample-Output.jpg)
+
 ```
 07/27/2021 17:11:10 => [Debug] Execution started for project: RPADev-S04P01-CalculatingSums
 07/27/2021 17:11:12 => [Info] RPADev-S04P01-CalculatingSums execution started
@@ -31,6 +33,10 @@ After making a pull request or downloading the project, open the Main.xaml in Ui
 07/27/2021 17:20:06 => [Debug] Operation 02 completed.
 07/27/2021 17:20:06 => [Info] RPADev-S04P01-CalculatingSums execution ended in: 00:00:10
 
+07/29/2021 15:11:04 => [Debug] Execution started for project: RPADev-S04P01-CalculatingSums
+07/29/2021 15:11:05 => [Info] RPADev-S04P01-CalculatingSums execution started
+07/29/2021 15:11:07 => [Debug] Operation 03 completed.
+07/29/2021 15:11:07 => [Info] RPADev-S04P01-CalculatingSums execution ended in: 00:00:02
 ```
 
 ### RPA Developer Foundation Sections
