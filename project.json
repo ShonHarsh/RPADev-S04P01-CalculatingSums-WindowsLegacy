@@ -4,9 +4,9 @@
   "description": "Calculates the sum in two Excel files",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.10.4]",
-    "UiPath.System.Activities": "[21.4.1]",
-    "UiPath.UIAutomation.Activities": "[21.4.4]"
+    "UiPath.Excel.Activities": "[2.23.2-preview]",
+    "UiPath.System.Activities": "[24.3.0]",
+    "UiPath.UIAutomation.Activities": "[24.2.2-preview]"
   },
   "webServices": [],
   "entitiesStores": [],
