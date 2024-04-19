@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="RPADev_S04P01_CalculatingSums_Method01" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1137,2006" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="RPADev_S04P01_CalculatingSums_Method01" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="680,2008" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
@@ -31,56 +31,56 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>DocumentFormat.OpenXml</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>System.Drawing</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
-      <AssemblyReference>DocumentFormat.OpenXml</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Keeps the Excel open and writes the results in real time, row by row so you can see the changes;&#xA;&#xA;Note: I created another worksheet in the source file named &quot;source&quot; to hold the original data." DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="630,1841" sap2010:WorkflowViewState.IdRef="Sequence_13">
+  <Sequence sap2010:Annotation.AnnotationText="Keeps the Excel open and writes the results in real time, row by row so you can see the changes;&#xA;&#xA;Note: I created another worksheet in the source file named &quot;source&quot; to hold the original data." DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="690,1943" sap2010:WorkflowViewState.IdRef="Sequence_13">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="Excel Application Scope Notes:&#xA;Microsoft Excel must be installed on the machine.&#xA;Tends to have lower performance than system file operations, especially as the dataset gets larger.&#xA;Supports .xls and .csv files." DisplayName="Excel Application Scope Visual Manual" sap:VirtualizedContainerService.HintSize="588,1692" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="RPADev-S04P01-CalculatingSums-Sample-Columns.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="Excel Application Scope Notes:&#xA;Microsoft Excel must be installed on the machine.&#xA;Tends to have lower performance than system file operations, especially as the dataset gets larger.&#xA;Supports .xls and .csv files." DisplayName="Excel Application Scope Visual Manual" sap:VirtualizedContainerService.HintSize="628,1775" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="Data\Input\RPADev-S04P01-CalculatingSums-Sample-Columns.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Sequence Range" sap:VirtualizedContainerService.HintSize="554,1511" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <Sequence DisplayName="Sequence Range" sap:VirtualizedContainerService.HintSize="594,1593" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
               <Variable x:TypeArguments="x:Int32" Name="sum" />
@@ -90,7 +90,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadRange AddHeaders="False" DisplayName="Read Range To DataTable" sap:VirtualizedContainerService.HintSize="512,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" SheetName="Source">
+            <ui:ExcelReadRange AddHeaders="False" DisplayName="Read Range To DataTable" sap:VirtualizedContainerService.HintSize="532,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" SheetName="Source">
               <ui:ExcelReadRange.DataTable>
                 <OutArgument x:TypeArguments="sd:DataTable">
                   <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">dataTable</mca:CSharpReference>
@@ -102,13 +102,13 @@
                 </InArgument>
               </ui:ExcelReadRange.Range>
             </ui:ExcelReadRange>
-            <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="For each Row in the DataTable variable." DisplayName="For Each DataTable Row" sap:VirtualizedContainerService.HintSize="512,1320" sap2010:WorkflowViewState.IdRef="ForEach`1_7">
+            <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="For each Row in the DataTable variable." DisplayName="For Each DataTable Row" sap:VirtualizedContainerService.HintSize="532,1385" sap2010:WorkflowViewState.IdRef="ForEach`1_7">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="item" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body Range Container" sap:VirtualizedContainerService.HintSize="476,1156" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <Sequence DisplayName="Body Range Container" sap:VirtualizedContainerService.HintSize="496,1220" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Int32" Name="rowIndex" />
                       <Variable x:TypeArguments="x:Double" Name="columnA" />
@@ -119,7 +119,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign DisplayName="Set RowIndex" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                    <Assign DisplayName="Set RowIndex" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_6">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Int32">
                           <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">rowIndex</mca:CSharpReference>
@@ -131,7 +131,7 @@
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" sap2010:Annotation.AnnotationText="columnA and columnB are double data types.  String and integer types will throw errors." ColumnIndex="0" DisplayName="Get Row Item ColumnA, Index 0" sap:VirtualizedContainerService.HintSize="434,227" sap2010:WorkflowViewState.IdRef="GetRowItem_6">
+                    <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" sap2010:Annotation.AnnotationText="columnA and columnB are double data types.  String and integer types will throw errors." ColumnIndex="0" DisplayName="Get Row Item ColumnA, Index 0" sap:VirtualizedContainerService.HintSize="434,228" sap2010:WorkflowViewState.IdRef="GetRowItem_6">
                       <ui:GetRowItem.Row>
                         <InArgument x:TypeArguments="sd:DataRow">
                           <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79">item</mca:CSharpValue>
@@ -148,7 +148,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRowItem>
-                    <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" sap2010:Annotation.AnnotationText="Hard coded column values for this exercise." ColumnIndex="1" DisplayName="Get Row Item ColumnB, Index 1" sap:VirtualizedContainerService.HintSize="434,216" sap2010:WorkflowViewState.IdRef="GetRowItem_7">
+                    <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" sap2010:Annotation.AnnotationText="Hard coded column values for this exercise." ColumnIndex="1" DisplayName="Get Row Item ColumnB, Index 1" sap:VirtualizedContainerService.HintSize="434,217" sap2010:WorkflowViewState.IdRef="GetRowItem_7">
                       <ui:GetRowItem.Row>
                         <InArgument x:TypeArguments="sd:DataRow">
                           <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">item</mca:CSharpValue>
@@ -165,7 +165,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRowItem>
-                    <Assign DisplayName="Set Sum" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign DisplayName="Set Sum" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Int32">
                           <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">sum</mca:CSharpReference>
@@ -177,7 +177,7 @@
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:ExcelWriteCell DisplayName="Column A Write" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="Sheet1">
+                    <ui:ExcelWriteCell DisplayName="Column A Write" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="Sheet1">
                       <ui:ExcelWriteCell.Cell>
                         <InArgument x:TypeArguments="x:String">
                           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">"A" + (rowIndex + 1).ToString()</mca:CSharpValue>
@@ -189,7 +189,7 @@
                         </InArgument>
                       </ui:ExcelWriteCell.Text>
                     </ui:ExcelWriteCell>
-                    <ui:ExcelWriteCell DisplayName="Column B Write" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="Sheet1">
+                    <ui:ExcelWriteCell DisplayName="Column B Write" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="Sheet1">
                       <ui:ExcelWriteCell.Cell>
                         <InArgument x:TypeArguments="x:String">
                           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90">"B" + (rowIndex + 1).ToString()</mca:CSharpValue>
